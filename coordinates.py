@@ -1,6 +1,15 @@
 import numpy as np
 import math as m
 
+'''
+Resources:
+https://stackoverflow.com/questions/68195056/finding-the-real-world-coordinates-of-an-object-from-a-camera
+https://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations
+http://sar.kangwon.ac.kr/etc/rs_note/rsnote/cp9/cp9-6.htm
+https://support.pix4d.com/hc/en-us/articles/202558969-Yaw-Pitch-Roll-and-Omega-Phi-Kappa-angles
+https://www.meccanismocomplesso.org/en/3d-rotations-and-euler-angles-in-python/
+'''
+
 def calculateArucoCoordinates(pitch, roll, yaw, x, y, z, imageX, imageY):
     f = 3.60
     Rx = np.matrix([[1, 0,              0           ],
